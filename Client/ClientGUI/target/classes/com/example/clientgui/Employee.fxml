@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="641.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientgui.Employee">
+   <children>
+      <TableView fx:id="projectsTable" layoutX="173.0" layoutY="14.0" prefHeight="610.0" prefWidth="770.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="200.0" text="ФИО" />
+          <TableColumn fx:id="colPosition" minWidth="0.0" prefWidth="166.4000244140625" text="Должность" />
+            <TableColumn fx:id="colSalary" minWidth="0.0" text="З/П" />
+            <TableColumn fx:id="colExp" minWidth="4.800048828125" prefWidth="79.20001220703125" text="Стаж" />
+            <TableColumn fx:id="colDate" prefWidth="96.0" text="Дата найма" />
+            <TableColumn fx:id="colFilial" minWidth="0.0" prefWidth="148.800048828125" text="Филиал" />
+        </columns>
+      </TableView>
+      <Label layoutX="47.0" layoutY="14.0" text="Фильтрация:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="42.0" text="Зарплата" />
+      <Label layoutX="75.0" layoutY="86.0" text="Стаж" />
+      <TextField fx:id="costFromInput" layoutX="17.0" layoutY="60.0" prefHeight="26.0" prefWidth="66.0" promptText="От" />
+      <TextField fx:id="costToInput" layoutX="102.0" layoutY="60.0" prefHeight="26.0" prefWidth="66.0" promptText="До" />
+      <TextField fx:id="riskFromInput" layoutX="16.0" layoutY="104.0" prefHeight="26.0" prefWidth="66.0" promptText="От" />
+      <TextField fx:id="riskToInput" layoutX="102.0" layoutY="104.0" prefHeight="26.0" prefWidth="66.0" promptText="До" />
+      <TextField fx:id="creatorSearchInput" layoutX="16.0" layoutY="158.0" promptText="ФИО" />
+      <ComboBox fx:id="typeCombo" layoutX="16.0" layoutY="190.0" prefWidth="150.0" promptText="Должность" />
+      <Button layoutX="42.0" layoutY="224.0" mnemonicParsing="false" onAction="#onApply" prefHeight="26.0" prefWidth="100.0" text="Применить" />
+      <Button layoutX="11.0" layoutY="597.0" mnemonicParsing="false" onAction="#onGoBack" prefHeight="26.0" prefWidth="100.0" text="Назад" />
+      <Button layoutX="44.0" layoutY="306.0" mnemonicParsing="false" onAction="#onReport" prefHeight="26.0" prefWidth="100.0" text="Отчёт" />
+      <Button layoutX="44.0" layoutY="343.0" mnemonicParsing="false" onAction="#onTop" prefHeight="26.0" prefWidth="100.0" text="Выписка" />
+      <Button layoutX="44.0" layoutY="380.0" mnemonicParsing="false" onAction="#onSendEmail" prefHeight="26.0" prefWidth="100.0" text="Отправить" />
+      <Label layoutX="68.0" layoutY="138.0" text="Поиск:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="44.0" layoutY="414.0" mnemonicParsing="false" onAction="#onFire" prefHeight="26.0" prefWidth="100.0" text="Уволить" />
+   </children>
+</AnchorPane>
